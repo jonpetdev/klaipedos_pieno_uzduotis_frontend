@@ -1,0 +1,28 @@
+.body-container{
+    margin-top:60px;
+    min-width:800px;
+    max-width:1200px;
+    min-height:100vh;
+    background-color: white;
+    padding:20px;
+}
+.table-box{
+        width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.action-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-button-box{
+    width: 100%;
+    display: flex;
+    gap:20px;
+    margin-top: 60px;
+}
+
+.small-button{
+ padding:5px !important;
+}

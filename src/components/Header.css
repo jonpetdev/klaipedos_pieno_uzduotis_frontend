@@ -1,0 +1,27 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.logo-container {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    height: 40px; /* Adjust logo height as needed */
+    width: auto; /* Maintain aspect ratio */
+}

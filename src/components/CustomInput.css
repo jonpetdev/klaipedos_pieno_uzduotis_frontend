@@ -1,0 +1,36 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+}
+
+.input-title {
+    font-size: 12px;
+    color: #3a3939;
+
+    display: flex;
+    align-items: center;
+}
+
+.required-marker {
+    color: red;
+    margin-right: 4px;
+}
+
+.input-field {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color:#000;
+}
+
+.password-toggle-icon {
+    cursor: pointer;
+    margin-left: 8px;
+}
+.input-error {
+    border: 1px solid red;
+}
