@@ -24,7 +24,7 @@ const CustomInput = ({
     const handleChange = (e) => {
         if (type === 'number' && isNaN(e.target.value)) return;
         if (type === 'email') {
-            setIsInvalidEmail(false); // Reset invalid email flag while typing
+            setIsInvalidEmail(false);
         }
         onChange(e, name);
     };

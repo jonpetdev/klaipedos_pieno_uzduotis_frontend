@@ -12,7 +12,6 @@ const Table = ({ columns, data, tableWidth }) => {
                 const aValue = a[sortConfig.key];
                 const bValue = b[sortConfig.key];
 
-                // Handle null or undefined values
                 if (aValue === null || aValue === undefined) return sortConfig.direction === 'asc' ? 1 : -1;
                 if (bValue === null || bValue === undefined) return sortConfig.direction === 'asc' ? -1 : 1;
 
@@ -29,7 +28,7 @@ const Table = ({ columns, data, tableWidth }) => {
     }, [data, sortConfig]);
 
     const handleSort = (key) => {
-        if (!key) return; // Ensure sorting only occurs if key is defined
+        if (!key) return;
         setSortConfig((prevConfig) => {
             if (prevConfig.key === key) {
                 return {
@@ -47,7 +46,6 @@ const Table = ({ columns, data, tableWidth }) => {
             style={{ width: tableWidth || '100%', overflowX: 'auto', fontSize: 12 }}
         >
             <table className="custom-table" style={{ width: '100%' }}>
-                {/* Render table header */}
                 <thead>
                 <tr>
                     {columns?.map((col, index) => (
@@ -57,7 +55,7 @@ const Table = ({ columns, data, tableWidth }) => {
                                 width: col.width || 'auto',
                                 cursor: col.indexKey ? 'pointer' : 'default',
                             }}
-                            onClick={() => col.indexKey && handleSort(col.indexKey)} // Only sort if indexKey exists
+                            onClick={() => col.indexKey && handleSort(col.indexKey)}
                         >
                             <div style={{display: "flex"}}>
                                 {col.label}
@@ -71,8 +69,6 @@ const Table = ({ columns, data, tableWidth }) => {
                     ))}
                 </tr>
                 </thead>
-
-                {/* Render table body */}
                 <tbody>
                 {sortedData?.map((record, rowIndex) => (
                     <tr key={rowIndex}>
@@ -99,11 +95,11 @@ Table.propTypes = {
             label: PropTypes.node.isRequired,
             render: PropTypes.func,
             width: PropTypes.string,
-            indexKey: PropTypes.string, // Key to map data fields
+            indexKey: PropTypes.string,
         })
     ).isRequired,
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
-    tableWidth: PropTypes.string, // Optional table width (e.g., '600px' or '100%')
+    tableWidth: PropTypes.string,
 };
 
 export default Table;

@@ -22,11 +22,11 @@ const Button = ({
 };
 
 Button.propTypes = {
-    onClick: PropTypes.func.isRequired, // Function to handle click events
-    styles: PropTypes.object, // Inline styles for the button
-    className: PropTypes.string, // Additional class names for styling
-    children: PropTypes.node.isRequired, // Content inside the button (e.g., text or icons)
-    disabled: PropTypes.bool, // Disable the button when true
+    onClick: PropTypes.func.isRequired,
+    styles: PropTypes.object,
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    disabled: PropTypes.bool,
 };
 
 export default Button;

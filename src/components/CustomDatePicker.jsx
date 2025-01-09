@@ -43,7 +43,7 @@ const CustomDatePicker = (date) => {
                 onChange={handleDateChange}
                 customInput={<input id="hidden-datepicker" style={{ display: 'none' }} />}
                 dateFormat="yyyy-MM-dd"
-                onClickOutside={(e) => e.stopPropagation()} // Avoid closing when clicking outside
+                onClickOutside={(e) => e.stopPropagation()}
                 showMonthYearDropdown/>
         </div>
     );
